@@ -1,0 +1,292 @@
+* {
+    margin:0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+nav {
+    background-color:#6D8F6D;
+ 
+}
+
+.banner {
+    width:100%;
+    height:500px;
+    background-image: url('img/plantabanner.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.logoSenac{
+    width:50%;
+    height:500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.bannerInf{
+    width:50%;
+    height:500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleBanner{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color:#6D8F6D;
+    font-size: 48px;
+    width:500px;
+    text-align: left;
+}
+
+/* From Uiverse.io by barisdogansutcu */ 
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: #6D8F6D;
+    color:white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    font-family: 'Montserrat';
+    margin-top: 13px;
+    margin-right: 60px;
+  }
+  
+  button:hover {
+    letter-spacing: 3px;
+    background-color: #6D8F6D;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #6D8F6D;
+  }
+  
+  button:active {
+    letter-spacing: 3px;
+    background-color: #6D8F6D;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #6D8F6D;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+
+  .infSite{
+    height: 800px;
+  }
+  
+
+
+.titleInf {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-size: 45px;
+    font-weight: bold;
+    color:#6D8F6D;
+    margin-bottom: 30px;
+}
+
+.primeiraParte{
+    width:30%;
+    height:400px;
+   
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.segundaParte {
+    width:70%;
+    height:400px;
+    align-items: center;
+    
+
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.imgRadius {
+    border-radius: 10px;
+}
+
+.h1Inf {
+    text-align: center;
+    color:#000000;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 35px;
+}
+.h2Inf {
+    text-align: left;
+    margin-left: 30px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin-right: 20px;
+    font-size: 30px;
+   
+}
+
+.h1Inf.second {
+    margin-top: 40px;
+}
+
+.border {
+    margin-top: 20px;
+    width:100%;
+    height:4px;
+    background-color: #6D8F6D;
+}
+
+footer {
+    width: 100%;
+    height:160px;
+    
+    background-color: #6D8F6D;
+}
+
+.imgFooter {
+    text-align: center;
+   align-items: center;
+    padding-top: 10px;
+}
+
+.left {
+ 
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color:white;
+    font-weight: 500;
+}
+
+.right {
+   
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color:white;
+    font-weight: 500;
+}
+
+.flexFooter {
+    display: flex;
+    justify-content: space-between;
+   
+    margin: 10px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-top: 20px;
+    
+}
+.lists{
+
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    padding-right: 30px;
+  
+   
+    
+} 
+
+
+
+.lists:hover{
+    color:#71ce71;
+   
+    
+} 
+.team {
+    background-image: url('img/greenery-frame-watercolor-green.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+   
+
+}
+.ourTeam-hedding p{
+    color: #5f5959;
+}
+.ourTeam-hedding strong{
+    color: black;
+}
+.ourTeam-hedding{
+    margin-bottom: 50px;
+}
+.ourTeam-hedding h1{
+    font-size: 45px;
+    font-weight: bold;
+    color: #6D8F6D;
+    font-family: 'Montserrat';
+}
+.ourTeam-box{
+    border-radius: 2px;
+    border-top: 6px solid #6D8F6D;
+    margin: 0px;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.section1{
+    padding: 30px 0px 30px 0px;
+}
+.section1 img{
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
+.section2 p{
+    font-weight: bold;
+    color: #6D8F6D;
+    letter-spacing: 1px;
+}
+.section2 span{
+    color: #979597;
+}
+.section3{
+    background-color: #6D8F6D;
+}
+.section3 i{
+    color: #ffffff !important;
+    padding: 15px;
+    font-size: 15px;
+}
+.section-info{
+    border-top: 6px solid #6D8F6D;
+}
+.section-info p{
+    color: #6D8F6D;
+}
+.section-info .section3{
+    background-color: #6D8F6D;
+}
+.section-danger{
+    border-top: 6px solid #6D8F6D;
+}
+.section-danger p{
+    color: #6D8F6D;
+}
+.section-danger .section3{
+    background-color: #6D8F6D;
+}
