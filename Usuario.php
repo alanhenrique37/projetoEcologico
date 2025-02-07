@@ -2,13 +2,14 @@
     namespace PHP\Modelo;
     class Usuario {
         protected string $nome;
+        protected string $id;
         protected string $cpf;
         protected string $data;
         protected string $categoria;
         protected string $peso;
         protected string $local;
 
-        public function __construct(string $nome, string $cpf, string $data, string $categoria, string $peso, string $local)
+        public function __construct(string $nome, string $cpf, string $data, string $categoria, string $peso, string $local, string $id)
         {
             //instanciar
             $this->nome = $nome;
@@ -17,6 +18,7 @@
             $this->categoria = $categoria;
             $this->peso = $peso;
             $this->local = $local;
+            $this->id = $id;
             
         }//fim do construtor
 
@@ -35,6 +37,7 @@
         public function imprimir():string
         {
             return "<br>Nome: ".$this->nome.
+                   "<br>ID: ".$this->id.
                    "<br>Cpf: ".$this->cpf.
                    "<br>Data: ".$this->data.
                    "<br>Categoria: ".$this->categoria.

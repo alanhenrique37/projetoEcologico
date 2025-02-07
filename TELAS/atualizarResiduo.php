@@ -47,13 +47,12 @@
         </div>
         <div class="form">
         <form method="POST">
-            <label class="form-label">NOME </label>
-            <input type="string" name="Nome" class="form-control" placeholder="Digite seu nome" required/><br><br>
+            <label class="form-label">ID DO RESÍDUO </label>
+            <input type="string" name="ID" class="form-control" placeholder="Digite o ID do resíduo" required/><br><br>
 
             <label class="form-label">ESCOLHA O CAMPO QUE DESEJA ATUALIZAR </label>
             <select name="tCampo" class="form-control" required>
                 <option value="Nome">Nome</option>
-            
                 <option value="Local">Local de Envio</option>
                 <option value="Categoria">Categoria</option>
                 <option value="Peso">Peso</option>
@@ -65,10 +64,10 @@
             <button type="submit">Atualizar
                 <?php
                     $conexao = new Conexao();
-                    if(isset($_POST['Nome'])){
+                    if(isset($_POST['ID'])){
                         $atualizar = new Atualizar();
 
-                        $nome = $_POST['Nome'];
+                        $id = $_POST['ID'];
                         $campo = $_POST['tCampo'];
                         $novoDado = $_POST['tNovoDado'];
                     }
@@ -78,12 +77,12 @@
                 </div>
     <div class="estilo">
     <?php
-        if(isset($_POST['Nome'])){
+        if(isset($_POST['ID'])){
             echo $atualizar->atualizarResiduo(
                 $conexao,
                 $campo,
                 $novoDado,
-                $nome);
+                $id);
         }
     ?>
     </div>

@@ -6,10 +6,10 @@
 
 
     class Atualizar{
-        function atualizarResiduo(Conexao $conexao, string $campo, string $novoDado, string $nome){
+        function atualizarResiduo(Conexao $conexao, string $campo, string $novoDado, string $id){
 
             $conn = $conexao->conectar();
-            $sql = "update cadastrarResiduo set $campo = '$novoDado' where nome = '$nome'" ;
+            $sql = "update cadastrarResiduo set $campo = '$novoDado' where id = '$id'" ;
             $result = mysqli_query($conn, $sql);
             mysqli_close($conn);
             if ($result){

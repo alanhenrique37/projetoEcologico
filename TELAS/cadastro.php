@@ -54,6 +54,11 @@
             </div>
 
             <div class="mb-3">
+                <label for="lId" class="form-label">ID do Resíduo</label>
+                <input type="text" class="form-control" id="tId" name="ID" required placeholder="Digite o ID do resíduo">
+            </div>
+
+            <div class="mb-3">
                 <label for="lData" class="form-label">DATA DA COLETAGEM</label>
                 <input type="date" class="form-control" id="tData" name="Data" required>
             </div>
@@ -95,6 +100,7 @@
               $conexao = new Conexao();//conectar no banco
               if(isset($_POST['Nome'])){
                   $nome = $_POST['Nome'];
+                  $id = $_POST['ID'];
                   $data = date($_POST['Data']);
                   $categoria = $_POST['Categorias'];
                   $peso = $_POST['Peso'];
@@ -115,7 +121,7 @@
             <?PHP
                 if(isset($_POST['Nome'])){
                   $inserir = new Inserir();
-                  echo $inserir->cadastrarResiduo($conexao, $nome, $data, $categoria, $peso, $local);
+                  echo $inserir->cadastrarResiduo($conexao, $nome, $id, $data, $categoria, $peso, $local);
                 }
             ?>
             </div>

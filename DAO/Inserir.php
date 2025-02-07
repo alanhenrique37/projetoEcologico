@@ -4,11 +4,11 @@
     use PHP\Modelo\DAO\Conexao;
  
     class Inserir{
-        function cadastrarResiduo(Conexao $conexao, string $nome, string $data, string $categoria, string $peso, string $local){
+        function cadastrarResiduo(Conexao $conexao, string $nome, string $id, string $data, string $categoria, string $peso, string $local){
             try{
                 $conn = $conexao->conectar();//Abrir o banco
-                $sql = "Insert into cadastrarResiduo(codigo, nome, dia, categoria, peso, lugar)
-                values('','$nome','$data','$categoria','$peso','$local')";
+                $sql = "Insert into cadastrarResiduo(codigo, nome , id, dia, categoria, peso, lugar)
+                values('','$nome','$id','$data','$categoria','$peso','$local')";
                 $result = mysqli_query($conn, $sql);
                 mysqli_close($conn);
                 //verificar o resultado

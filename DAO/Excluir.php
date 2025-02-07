@@ -6,10 +6,10 @@
     class Excluir{
         function excluirResiduo(
             Conexao $conexao,
-            string $nome
+            string $id
         ){
             $conn = $conexao->conectar();
-            $sql = "delete from cadastrarResiduo where nome = '$nome'";
+            $sql = "delete from cadastrarResiduo where ID = '$id'";
             $result = mysqli_query($conn, $sql);
             mysqli_close($conn);
 

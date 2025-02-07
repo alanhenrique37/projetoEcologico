@@ -45,22 +45,22 @@
         </div>
         <div class="form">
         <form method="POST">
-                    <label class="form-label">DIGITE O NOME </label>
-                    <input type="text" name="Nome" class="form-control" placeholder="Digite o nome" required id="Nome">
+                    <label class="form-label">DIGITE O ID DO RESÍDUO </label>
+                    <input type="text" name="ID" class="form-control" placeholder="Digite ID do Resíduo" required id="ID">
 
                     <button type="submit">Excluir
                         <?php
                             $conexao = new Conexao();
-                            if(isset($_POST['Nome'])){
-                                $nome     = $_POST['Nome'];
+                            if(isset($_POST['ID'])){
+                                $id     = $_POST['ID'];
                                 $excluir = new Excluir();
                             }
                         ?>
                     </button>
                     <div class="estilo">
                     <?php
-                    if(isset($_POST['Nome'])){
-                        echo $excluir->excluirResiduo($conexao, $nome);
+                    if(isset($_POST['ID'])){
+                        echo $excluir->excluirResiduo($conexao, $id);
                     }else{
                         echo "";
                     }

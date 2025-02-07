@@ -21,6 +21,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/cadastro.css">
     </head>
@@ -47,14 +50,14 @@
         <div class="form">
     <form method="POST">
     <div class="mb-3">
-        <label class="form-label">INFORME UM NOME</label>
-        <input type="text" name="Nome"  id="Nome" class="form-control" placeholder="Digite um nome válido!"/>
+        <label class="form-label">INFORME O ID </label>
+        <input type="text" name="ID"  id="ID" class="form-control" placeholder="Digite um ID válido!"/>
     </div>
         <button type="submit">  
         Consultar
         <?php
             $conexao = new Conexao();
-            $nome = $_POST['Nome'];
+            $id = $_POST['ID'];
             $consultar = new Consultar();
             
             
@@ -62,14 +65,18 @@
         ?>
     
     </button>
+
+
+
+    
     </form>
 </div>
 <div class="estilo">
     <?php
  
-      if(isset($_POST['Nome'])){
+      if(isset($_POST['ID'])){
         $consultar = new Consultar();
-        echo $consultar->consultarResiduo($conexao, $nome);
+        echo $consultar->consultarResiduo($conexao, $id);
       }
 
     ?>
